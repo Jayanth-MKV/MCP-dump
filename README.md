@@ -1,46 +1,55 @@
 # MCP-dump
 
-A collection of Model Context Protocol (MCP) servers built out of curiosity.
+A collection of Model Context Protocol (MCP) servers and agents for experimentation and learning.
 
 ## Overview
 
-This repository contains various MCP (Model Context Protocol) server implementations created for experimental and learning purposes. The primary goal of this project is to explore different approaches to building MCP servers and to better understand the protocol's capabilities and limitations.
+This repository contains multiple projects demonstrating different ways to build and interact with MCP (Model Context Protocol) servers. The goal is to explore MCP server implementations, experiment with LLM context management, and provide reference setups for others interested in MCP.
 
 ## Structure
 
 ```
-└── jayanth-mkv-mcp-dump/
-    └── mcp-hello/
+MCP-dump/
+├── ai-agent-postgres-mcp/   # Example: AI agent using MCP to analyze a Postgres database
+│   ├── ai_agent_postgres_mcp.ipynb
+│   ├── main.py
+│   └── README.md
+└── mcp-hello/               # Minimal MCP server example for Cloudflare Workers
+    ├── src/
+    ├── test/
+    ├── package.json
+    └── README.md
 ```
 
-The repository is organized into different server implementations, with `mcp-hello` being the first example. Each directory contains a standalone MCP server implementation.
+- [`ai-agent-postgres-mcp`](ai-agent-postgres-mcp/): Demonstrates connecting an AI agent to a Postgres database via MCP for advanced analysis and conversational querying.
+- [`mcp-hello`](mcp-hello/): A minimal MCP server implementation using Cloudflare Workers.
 
 ## What is MCP?
 
-Model Context Protocol (MCP) is a protocol designed for interfacing with large language models (LLMs) and managing context between prompts and responses. It provides a standardized way to communicate with language models, allowing for more consistent and reliable interactions.
+Model Context Protocol (MCP) is a protocol for interfacing with large language models (LLMs) and managing conversational or contextual state between prompts and responses. MCP standardizes communication with LLMs, enabling more reliable and consistent interactions.
 
 ## Purpose
 
-This collection exists primarily for:
+This repository exists to:
 
-- Learning and experimental purposes
-- Testing different MCP server implementations
-- Exploring optimizations and variations in MCP setups
-- Serving as reference implementations for others interested in MCP
+- Learn and experiment with MCP server and agent implementations
+- Test different approaches to MCP and LLM context management
+- Explore optimizations and variations in MCP setups
+- Serve as reference implementations for the community
 
 ## Getting Started
 
-To use any of the MCP servers in this repository:
+To try any project in this repository:
 
-1. Navigate to the specific server directory (e.g., `mcp-hello/`)
-2. Follow the instructions in that directory's README (if available)
+1. Navigate to the desired project directory (e.g., [`mcp-hello`](mcp-hello/), [`ai-agent-postgres-mcp`](ai-agent-postgres-mcp/))
+2. Follow the instructions in that directory's `README.md`
 3. Install any required dependencies
-4. Run the server according to its documentation
+4. Run the server or agent as described
 
 ## Contributions
 
-Feel free to contribute your own MCP server implementations or improvements to existing ones. All contributions should be made through pull requests.
+Contributions are welcome! Feel free to submit your own MCP server or agent implementations, or improvements to existing ones, via pull requests.
 
 ## Disclaimer
 
-These servers are built out of curiosity and for educational purposes. They may not be production-ready or follow all best practices. Use at your own risk.
+These projects are for educational and experimental purposes. They may not be production-ready or follow all best practices. Use at your own risk.
