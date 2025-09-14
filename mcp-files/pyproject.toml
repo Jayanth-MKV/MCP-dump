@@ -1,0 +1,23 @@
+[project]
+name = "mcp-files"
+version = "0.1.0"
+description = "mcp for files"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "mcp-server",
+    "google-genai>=1.36.0",
+    "langchain>=0.3.27",
+    "langchain-google-genai>=2.1.10",
+    "langchain-mcp-adapters>=0.1.9",
+    "langgraph>=0.6.7",
+]
+
+[dependency-groups]
+dev = ["python-dotenv>=1.1.1"]
+
+[tool.uv.workspace]
+members = ["mcp-server"]
+
+[tool.uv.sources]
+mcp-server = { workspace = true }
