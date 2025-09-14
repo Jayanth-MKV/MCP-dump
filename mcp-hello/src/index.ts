@@ -1,4 +1,3 @@
-
 import { WorkerEntrypoint } from 'cloudflare:workers'
 import { ProxyToSelf } from 'workers-mcp'
 
@@ -10,6 +9,18 @@ export default class MyWorker extends WorkerEntrypoint<Env> {
    */
   sayHello(name: string) {
     return `Hello from an MCP Worker, ${name}!`
+  }
+
+  /**
+   * Gets the current time with a custom message
+   * @param message {string} optional custom message to include
+   * @return {string} formatted timestamp with message
+   */
+  getCurrentTime(message?: string) {
+    const timestamp = new Date().toISOString()
+    return message
+      ? `${message} at ${timestamp}`
+      : `Current time is ${timestamp}`
   }
 
   /**
